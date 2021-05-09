@@ -1,0 +1,18 @@
+{% extends 'base.html' %}
+
+{% block content %}
+    <div class="d-flex justify-content-center">
+    <div class="col-xs-12">
+        <div class="center-block">
+            <h1>{% block title %} Welcome to Machine Learning Email Predict {% endblock %}</h1>
+        {% for table in tables %}
+                {{titles[loop.index]}}
+                {{ table|safe }}
+        {% endfor %}
+        <p>This is a project of the Faculty of Computer and Systems Engineering, which is based on the detection of Spear Phishing emails</p>
+        <img src="{{url_for('static', filename='logo_u.png')}}" align="middle"class="img-fluid" alt="Responsive image" width="800" height="800" />
+        </div>
+    </div>
+    </div>
+    
+{% endblock %}
